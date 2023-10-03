@@ -1,0 +1,13 @@
+package com.reis.layer3exercise;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Layer3exerciseApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
