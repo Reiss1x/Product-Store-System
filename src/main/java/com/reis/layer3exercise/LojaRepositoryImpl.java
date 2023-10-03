@@ -2,6 +2,7 @@ package com.reis.layer3exercise;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
@@ -38,5 +39,11 @@ public class LojaRepositoryImpl implements ILojaRepository {
             }
         }
         return -1;
+    }
+    public List<Integer> prodsAbaixo(){
+        return list.stream()
+                .filter(x -> x.getQtd() < 3)
+                .map(Produto::getId)
+                .collect(Collectors.toList());
     }
 }
