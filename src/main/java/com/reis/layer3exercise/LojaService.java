@@ -4,14 +4,18 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LojaService {
-    LojaRepositoryImpl estoque;
-    
+    // LojaRepositoryImpl estoque;
+    LojaJDBCImpl estoque;
 
-    public LojaService(LojaRepositoryImpl estoque){
+    public LojaService(LojaJDBCImpl estoque){
         this.estoque = estoque;
+
     }
 
-    public Iterable<Produto> getAllProdutos(){
+    public Iterable<Produto> getEstoque(){
+        return estoque.getEstoque();
+    }
+    public  Iterable<Produto> getCatalogo(){
         return estoque.getCatalogo();
     }
 
@@ -19,13 +23,14 @@ public class LojaService {
         estoque.setProduto(produto);
     }
 
-    public void venda(int id, int quantidade) {
+    public int venda(int id, int quantidade) {
         int preco = estoque.venderProd(id, quantidade);
         if(preco != -1){
             if(quantidade > 10){
                 preco -= preco*0.10;
                 preco += preco*0.05;
             } 
-        }     
+        }
+        return preco;
     }
 }

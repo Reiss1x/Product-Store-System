@@ -1,0 +1,1 @@
+insert into Produto (id, descricao, preco, quantidade) values (0,'Banana', 2, 10);

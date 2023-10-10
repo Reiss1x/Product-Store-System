@@ -2,21 +2,19 @@ package com.reis.layer3exercise;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class LojaRepositoryImpl implements ILojaRepository {
     private ArrayList<Produto> list = new ArrayList<>();
 
-    public List<Produto> getAll() {
+    public List<Produto> getCatalogo() {
         return list;
     }
     @Override 
-    public List<Produto> getCatalogo(){
+    public List<Produto> getEstoque(){
         return list.stream().filter(p -> p.getQtd() > 0).collect(Collectors.toList());
     }
     public void setProduto(Produto produto){
