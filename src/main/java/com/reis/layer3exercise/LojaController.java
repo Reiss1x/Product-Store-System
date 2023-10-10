@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
+//Classe controller responsável pelas solicitações dos clientes e retornar respostas apropriadas.
 @RestController
 public class LojaController {
 
@@ -49,8 +52,8 @@ public class LojaController {
 
     @PostMapping("/venda")
     @CrossOrigin(origins = "*")
-    public int venda(@RequestParam("id") int id, @RequestParam("quantidade") int quantidade){
-        int aux = loja.venda(id,quantidade);
+    public String venda(@RequestParam("id") int id, @RequestParam("quantidade") int quantidade){
+        String aux = loja.venda(id,quantidade);
         return aux;
     }
 }
