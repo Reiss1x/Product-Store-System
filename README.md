@@ -24,7 +24,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Reiss1x/atv3LayerArch">
+  <a href="https://github.com/Reiss1x/Product-Store-System">
     <img src="src/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
@@ -33,10 +33,10 @@
   <p align="center">
       Full Stack Project Report - Fictitious Product Site
     <br />
-    <a href="https://github.com/Reiss1x/atv3LayerArch"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Reiss1x/Product-Store-System"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Reiss1x/atv3LayerArch">View Demo (WIP)</a>
+    <a href="https://github.com/Reiss1x/Product-Store-System">View Demo (WIP)</a>
   </p>
 </div>
 
@@ -102,7 +102,7 @@ The project was conceived to simulate the development of an e-commerce website t
 
 Gabriel Reis - [Linkedin](https://www.linkedin.com/in/devgabrielreis/) - gabrielreis.reis1903@gmail.com
 
-Project Link: [https://github.com/Reiss1x/atv3LayerArch](https://github.com/Reiss1x/atv3LayerArch)
+Project Link: [https://github.com/Reiss1x/Product-Store-System](https://github.com/Reiss1x/Product-Store-System)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
