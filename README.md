@@ -76,14 +76,14 @@ The project was conceived to simulate the development of an e-commerce website t
 ## Built With
 
 
- [![Node][Node.js]][Node-url]
+ [![SpringBoot][SpringBoot]][Spring-url]
  ![JavaScript]
  [![React][React.js]][React-url]
  [![Bootstrap][Bootstrap.com]][Bootstrap-url]
  [![MongoDB][MongoDB]][MongoDB-url]
 
  - Front end - **React, Bootstrap**
- - Back end - **Node.js**
+ - Back end - **SpringBoot**
  - Database - **MongoDB**
   
 
@@ -121,3 +121,9 @@ Project Link: [https://github.com/Reiss1x/atv3LayerArch](https://github.com/Reis
 [JavaScript]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E 
 [MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [MongoDB-url]: https://www.mongodb.com/
+[Springboot]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
+[Spring-url]: https://spring.io/projects/spring-boot
+
+
+
+
