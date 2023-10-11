@@ -1,4 +1,4 @@
-.<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -18,7 +18,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -26,7 +25,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Reiss1x/atv3LayerArch">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="src/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Product Store</h3>
@@ -47,22 +46,11 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Back end</a>
-      <!--
-      ***<ul>
-        ***<li><a href="#prerequisites">Prerequisites</a></li>
-        ***<li><a href="#installation">Installation</a></li>
-      ***</ul>
-      -->
-    </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#core-features">Core Features</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
   </ol>
 </details>
 
@@ -73,88 +61,46 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-O projeto foi concebido para simular o desenvolvimento de um site de comércio eletrônico que permite aos usuários cadastrar, visualizar, e simular venda de produtos. Embora os produtos sejam fictícios, a aplicação foi criada de forma a imitar um cenário real, o que possibilitou uma experiência de aprendizado rica em desenvolvimento full stack.
+The project was conceived to simulate the development of an e-commerce website that allows users to view, add items to the catalog/stock, and complete purchases. While the products are fictitious, the application was designed to mimic a real-world scenario, providing a rich full-stack development learning experience.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- CORE FEATURES -->
+## Core Features
+
+<ul>
+  <li>Users can <strong>view</strong> products</li>
+  <li>Sellers can <strong>add/remove</strong> products</li>
+  <li>Sellers can  <strong>simulate</strong> a sale </li>
+  <li>Sellers can <strong>update</strong> product atributes (quantity & price)</li>
+</ul>
+
+## Built With
 
 
+ [![Node][Node.js]][Node-url]
+ ![JavaScript]
+ [![React][React.js]][React-url]
+ [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+ [![MongoDB][MongoDB]][MongoDB-url]
 
-### Built With
-
-
-* [![Node][Node.js]][Node-url]
-* ![JavaScript]
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![MongoDB][MongoDB]][MongoDB-url]
+ - Front end - **React, Bootstrap**
+ - Back end - **Node.js**
+ - Database - **MongoDB**
   
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/Reiss1x/atv3LayerArch.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/Reiss1x/atv3LayerArch/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- [x] Implement back end
+- [x] Document project
+- [ ] Add cart feature to users
+- [ ] Implement the front end
+- [ ] Finish readme
 
 
 <!-- CONTACT -->
 ## Contact
 
-Gabriel Ries - [Linkedin](https://www.linkedin.com/in/devgabrielreis/) - gabrielreis.reis1903@gmail.com
+Gabriel Reis - [Linkedin](https://www.linkedin.com/in/devgabrielreis/) - gabrielreis.reis1903@gmail.com
 
 Project Link: [https://github.com/Reiss1x/atv3LayerArch](https://github.com/Reiss1x/atv3LayerArch)
 
