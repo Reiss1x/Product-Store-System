@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProductM implements Products{
+public class ProductM {
     @Id
     private ObjectId id;
     private String prodId;
