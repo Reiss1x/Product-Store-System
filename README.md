@@ -67,7 +67,7 @@ The project was conceived to simulate the development of an e-commerce website t
 ## Core Features
 
 <ul>
-  <li>Users can <strong>view</strong> products</li>
+  <li>Users can <strong>view</strong> available and unavailable products</li>
   <li>Sellers can <strong>add/remove</strong> products</li>
   <li>Sellers can  <strong>simulate</strong> a sale </li>
   <li>Sellers can <strong>update</strong> product atributes (quantity & price)</li>
