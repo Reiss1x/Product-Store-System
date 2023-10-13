@@ -92,7 +92,7 @@ The project was conceived to simulate the development of an e-commerce website t
 ## Roadmap
 - [x] Implement back end
 - [x] Document project
-- [ ] Implement database interaction
+- [ ] Implement MongoDB interaction
 - [ ] Add cart feature to users
 - [ ] Implement the front end
 - [ ] Finish readme
