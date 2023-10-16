@@ -57,9 +57,15 @@ public class StoreService {
         if(aux.isPresent()){
             ProductM prod = aux.get();
             if(prod.getQuantity() - quantity >= 0){
+
                 int newqnt = prod.getQuantity() - quantity;
-                mt.update(ProductM.class).matching(Criteria.where("prodId").is(prodId)).apply(new Update().push("quantity").value(newqnt));
-                return Integer.toString(prod.getPrice());
+
+                mt.update(ProductM.class)
+                    .matching(Criteria.where("prodId").is(prodId))
+                    .apply(new Update().set("quantity", newqnt))
+                    .first();
+
+                return Integer.toString(prod.getPrice() * quantity);
             }
             else {
                 throw new IllegalArgumentException("Product out of stock");

@@ -52,7 +52,7 @@ public class StoreController {
     public void removeProduct(String prodId){
         store.removeProd(prodId);
     }
-    @PostMapping("/stock/venda")
+    @PostMapping("/api/products/sell")
     public String venda(@RequestParam("prodId") String id, @RequestParam("quantity") int quantity){
         String aux = store.sellProd(id,quantity);
         return aux;
