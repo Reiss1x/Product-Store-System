@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -51,10 +52,9 @@ public class StoreController {
     public void removeProduct(String prodId){
         store.removeProd(prodId);
     }
-    // @PostMapping("/venda")
-    // @CrossOrigin(origins = "*")
-    // public String venda(@RequestParam("id") int id, @RequestParam("quantidade") int quantidade){
-    //     String aux = store.venda(id,quantidade);
-    //     return aux;
-    // }
+    @PostMapping("/stock/venda")
+    public String venda(@RequestParam("prodId") String id, @RequestParam("quantity") int quantity){
+        String aux = store.sellProd(id,quantity);
+        return aux;
+    }
 }
