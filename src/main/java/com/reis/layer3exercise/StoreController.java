@@ -27,43 +27,52 @@ public class StoreController {
     public String preco(){
         return "Welcome to the store.";
     }
-
-    @GetMapping("/stock")
-    public ResponseEntity<List<Product>> stock(){
-        return new ResponseEntity<List<Product>>(stock.getStock(),HttpStatus.OK);
-    }
-
-    @RequestMapping("/api/products")
-    public ResponseEntity<List<Product>> catalog(){
-        return new ResponseEntity<List<Product>>(stock.getCatalog(),HttpStatus.OK);
-    }
-
-    @GetMapping("/api/products/{prodId}")
-    public ResponseEntity<Optional<Product>> getProduct(@PathVariable String prodId){
-        return new ResponseEntity<Optional<Product>>(stock.getProduct(prodId), HttpStatus.OK);
-    }
-
+    
+    //Register products
     @PostMapping("/api/products/new-product")
     public void registerNewProduct(@RequestBody List<Product> products){
         for(Product p : products){
         stock.registerProd(p);
         }
     }
+
+    //Get available products
+    @GetMapping("/stock")
+    public ResponseEntity<List<Product>> stock(){
+        return new ResponseEntity<List<Product>>(stock.getStock(),HttpStatus.OK);
+    }
+
+    //Get all products
+    @RequestMapping("/api/products")
+    public ResponseEntity<List<Product>> catalog(){
+        return new ResponseEntity<List<Product>>(stock.getCatalog(),HttpStatus.OK);
+    }
+    
+    //Get specific products (byId)
+    @GetMapping("/api/products/{prodId}")
+    public ResponseEntity<Optional<Product>> getProduct(@PathVariable String prodId){
+        return new ResponseEntity<Optional<Product>>(stock.getProduct(prodId), HttpStatus.OK);
+    }
+    
+    //Delete specific product (byId)
     @PostMapping("/api/products/delete-product")
     public void removeProduct(String prodId){
         stock.removeProd(prodId);
     }
-
+    
+    //Delete ALL products
     @PostMapping("/api/products/delete-all-products")
     public void removeAllProducts(){
         stock.removeAllProducts();
     }
     
-    @PostMapping("/api/asd/sale")
+    //Register a sale
+    @PostMapping("/api/products/sale")
     public int makeSale(@RequestBody Sale sale){
         return sales.registerSale(sale, stock.getCatalog());
     }
 
+    //Get all sales
     @GetMapping("/api/sales")
     public List<Sale> getSales(){
         return sales.getSales();
