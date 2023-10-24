@@ -1,4 +1,4 @@
-package com.reis.layer3exercise;
+package com.reis.layer3exercise.interfaces;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,23 +11,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import com.reis.layer3exercise.domain.StockService;
+import com.reis.layer3exercise.entities.Product;
 
-
-//Classe controller responsável pelas solicitações dos clientes e retornar respostas apropriadas.
-@RestController
-public class StoreController {
-    @Autowired
-    private SaleService sales;
+public class StockController {
+    
     @Autowired
     private StockService stock;
 
-    @GetMapping("/home")
-    public String preco(){
-        return "Welcome to the store.";
-    }
-    
     //Register products
     @PostMapping("/api/products/new-product")
     public void registerNewProduct(@RequestBody List<Product> products){
@@ -65,17 +57,4 @@ public class StoreController {
     public void removeAllProducts(){
         stock.removeAllProducts();
     }
-    
-    //Register a sale
-    @PostMapping("/api/products/sale")
-    public int makeSale(@RequestBody Sale sale){
-        return sales.registerSale(sale, stock.getCatalog());
-    }
-
-    //Get all sales
-    @GetMapping("/api/sales")
-    public List<Sale> getSales(){
-        return sales.getSales();
-    }
-    
 }

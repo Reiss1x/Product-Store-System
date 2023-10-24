@@ -1,12 +1,13 @@
-package com.reis.layer3exercise;
+package com.reis.layer3exercise.domain;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
+
+import com.reis.layer3exercise.entities.Product;
 
 @Service
 public class StockService {

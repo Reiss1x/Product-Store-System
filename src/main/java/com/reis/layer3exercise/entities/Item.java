@@ -1,4 +1,4 @@
-package com.reis.layer3exercise;
+package com.reis.layer3exercise.entities;
 
 public class Item {
     private String prodId;
