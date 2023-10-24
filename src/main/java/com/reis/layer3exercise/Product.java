@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProductM {
+public class Product {
     @Id
     private ObjectId id;
     private String prodId;
@@ -24,7 +24,7 @@ public class ProductM {
     private Integer price;
     private Integer quantity;
 
-    public ProductM(String prodId, String description, Integer price, Integer quantity) {
+    public Product(String prodId, String description, Integer price, Integer quantity) {
         this.prodId = prodId;
         this.description = description;
         this.price = price;
@@ -35,6 +35,9 @@ public class ProductM {
     }
     public ObjectId getId(){
         return this.id;
+    }
+    public String prodId(){
+        return prodId;
     }
     public void decreaseQuantity(int quantity) {
         this.quantity -= quantity;
@@ -53,7 +56,7 @@ public class ProductM {
     }
     @Override
     public String toString() {
-        return "ProductM [prodId=" + prodId + ", description=" + description + ", price=" + price + ", quantity="
+        return "Product [prodId=" + prodId + ", description=" + description + ", price=" + price + ", quantity="
                 + quantity + "]";
     }
 
