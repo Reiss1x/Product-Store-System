@@ -5,14 +5,21 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
 import com.reis.layer3exercise.entities.Product;
+import com.reis.layer3exercise.entities.Sale;
 
 @Service
 public class StockService {
     @Autowired
     private IStockRepository stock;
+    @Autowired
+    private MongoTemplate mt;
 
     //retorna o estoque para a classe controle
     public List<Product> getStock(){
@@ -31,6 +38,16 @@ public class StockService {
     //recebe a requisição da classe controle e manda para a de banco de dados
     public void registerProd(Product product){
         stock.insert(product);
+    }
+    public void addQnt(String prodId, String quantity){
+        Optional<Product> aux = getProduct(prodId);
+        if(aux.isPresent()){
+            int qnt = Integer.parseInt(quantity) + aux.get().getQuantity();
+            Update update = new Update().set("quantity", qnt);
+            mt.updateFirst(new Query(Criteria.where("prodId").is(prodId)), update, Product.class);
+        } else {
+            throw new IllegalArgumentException("Product: "+ prodId+ " does not exist");
+        }
     }
     public void removeProd(String prodId){
         

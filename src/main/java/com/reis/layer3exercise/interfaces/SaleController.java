@@ -16,7 +16,10 @@ public class SaleController {
     @Autowired
     private SaleService sales;
 
-    
+    @GetMapping("/home")
+    public String home(){
+        return "Welcome to the store.";
+    }
     //Register a sale
     @PostMapping("/api/products/sale")
     public int makeSale(@RequestBody Sale sale){

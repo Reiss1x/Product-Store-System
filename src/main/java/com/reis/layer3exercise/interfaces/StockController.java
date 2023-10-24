@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.reis.layer3exercise.domain.StockService;
 import com.reis.layer3exercise.entities.Product;
-
+@RestController
 public class StockController {
     
     @Autowired
@@ -44,6 +45,12 @@ public class StockController {
     @GetMapping("/api/products/{prodId}")
     public ResponseEntity<Optional<Product>> getProduct(@PathVariable String prodId){
         return new ResponseEntity<Optional<Product>>(stock.getProduct(prodId), HttpStatus.OK);
+    }
+
+    //Add quantity of product to stock
+    @PostMapping("/api/products/{prodId}/addToStock/{quantity}")
+    public void addQnt(@PathVariable String prodId, @PathVariable String quantity){
+        stock.addQnt(prodId, quantity);
     }
     
     //Delete specific product (byId)
