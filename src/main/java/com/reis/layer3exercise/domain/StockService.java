@@ -39,16 +39,20 @@ public class StockService {
     public void registerProd(Product product){
         stock.insert(product);
     }
-    public void addQnt(String prodId, String quantity){
+    public int addQnt(String prodId, String quantity){
         Optional<Product> aux = getProduct(prodId);
+        int qnt = 0;
         if(aux.isPresent()){
-            int qnt = Integer.parseInt(quantity) + aux.get().getQuantity();
+            qnt = Integer.parseInt(quantity) + aux.get().getQuantity();
+            
             Update update = new Update().set("quantity", qnt);
             mt.updateFirst(new Query(Criteria.where("prodId").is(prodId)), update, Product.class);
         } else {
             throw new IllegalArgumentException("Product: "+ prodId+ " does not exist");
         }
+        return qnt;
     }
+
     public void removeProd(String prodId){
         
         Optional<Product> aux = stock.findProductByProdId(prodId);

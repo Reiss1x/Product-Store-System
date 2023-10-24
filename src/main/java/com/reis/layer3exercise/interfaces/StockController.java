@@ -47,10 +47,11 @@ public class StockController {
         return new ResponseEntity<Optional<Product>>(stock.getProduct(prodId), HttpStatus.OK);
     }
 
-    //Add quantity of product to stock
+    //Add quantity of product to stock (byId)
     @PostMapping("/api/products/{prodId}/addToStock/{quantity}")
-    public void addQnt(@PathVariable String prodId, @PathVariable String quantity){
-        stock.addQnt(prodId, quantity);
+    public int addQnt(@PathVariable String prodId, @PathVariable String quantity){
+        return stock.addQnt(prodId, quantity);
+        
     }
     
     //Delete specific product (byId)
