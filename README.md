@@ -71,7 +71,7 @@ The project was conceived to simulate the development of an e-commerce website t
   <li>Sellers can <strong>add/remove</strong> products</li>
   <li>Sellers can  <strong>simulate</strong> a sale </li>
   <li>Sellers can <strong>update</strong> product atributes (quantity & price)</li>
-  <li>Sellers can <strong>view</strong> sale reports</li>
+  <li>Sellers can <strong>view/delete</strong> sale reports</li>
 </ul>
 
 ## Built With
@@ -95,7 +95,6 @@ The project was conceived to simulate the development of an e-commerce website t
 - [x] Document project
 - [x] Implement MongoDB interaction
 - [ ] Add cart feature to users
-- [ ] Implement discount sale
 - [ ] Implement the front end
 - [ ] Finish readme
 
