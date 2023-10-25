@@ -61,7 +61,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The project was conceived to simulate the development of an e-commerce website that allows users to view, add items to the catalog/stock, and complete purchases. While the products are fictitious, the application was designed to mimic a real-world scenario, providing a rich full-stack development learning experience.
+The project was conceived to simulate the development of an e-commerce website that allows users to <strong>view, add items to the catalog/stock, and complete purchases</strong>. While the products are fictitious, the application was designed to mimic a real-world scenario, providing a rich <strong>full-stack development learning experience</strong>.
 
 <!-- CORE FEATURES -->
 ## Core Features
