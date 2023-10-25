@@ -65,4 +65,6 @@ public class StockController {
     public void removeAllProducts(){
         stock.removeAllProducts();
     }
+
+    
 }

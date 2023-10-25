@@ -31,4 +31,10 @@ public class SaleController {
     public List<Sale> getSales(){
         return sales.getSales();
     }
+
+    //Delete ALL sales
+    @PostMapping("/api/products/delete-all-sales")
+    public void removeAllSales(){
+        sales.deleteSales();
+    }
 }

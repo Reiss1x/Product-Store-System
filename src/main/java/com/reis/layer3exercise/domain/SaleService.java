@@ -60,4 +60,5 @@ public class SaleService {
     public void deleteSales(){
         sr.deleteAll();
     }
+    
 }
