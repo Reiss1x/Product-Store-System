@@ -96,6 +96,7 @@ The project was conceived to simulate the development of an e-commerce website t
 - [x] Implement MongoDB interaction
 - [ ] Add cart feature to users
 - [ ] Implement the front end
+- [ ] Add unit testing
 - [ ] Finish readme
 
 
